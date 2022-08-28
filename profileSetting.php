@@ -1,9 +1,7 @@
 <?php
   include './controller/core_functions.php';
-  if (!$_SESSION['authenticated']) {
-    header('location: http://localhost:8000/login.php');
-  }
 
+  handleNotAuthenticated();
   // echo isset($_FILES['newProfile']);
   if (isset($_POST['saveChanges'])) {
     $name = $_POST['name'];

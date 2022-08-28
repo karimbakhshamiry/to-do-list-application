@@ -1,5 +1,7 @@
 <?php
   include './controller/core_functions.php';
+  handleNotAuthenticated();
+
   if (isset($_POST['addTask'])) {
     $message = addNewTask($_POST['category'], $_POST['newTask'], $_SESSION['user']['userName']);
   }
